@@ -1,0 +1,7 @@
+#!/bin/bash
+
+redis-server /etc/redis/redis.conf
+
+openvassd && \
+openvasmd && \
+gsad -f
