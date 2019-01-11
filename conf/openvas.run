@@ -1,7 +1,6 @@
 #!/bin/bash
 
-redis-server /etc/redis/redis.conf
-
-openvassd && \
-openvasmd && \
-gsad -f
+service redis-server start 
+openvassd -f & 
+openvasmd -f &
+gsad -f --allow-header-host 192.168.239.137  
